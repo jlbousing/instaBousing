@@ -1,0 +1,11 @@
+{
+  "name": "instabousing",
+  "version": "1.0.0",
+  "description": "open source code for use the instagram api for JavaScipt",
+  "main": "ib.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jorge Luis Bou-saad",
+  "license": "ISC"
+}
