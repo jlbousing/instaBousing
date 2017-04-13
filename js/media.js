@@ -56,7 +56,9 @@ function media(token,selector){
                 var etiqueta = '<img src="'+url+'">';
                 
                 $("."+item).append(etiqueta);
-            }); 
+            });
+              
+            document.getElementById("temp").value = data.pagination.next_url;  
         },
           error: function(jqXHR,textStatus,error){
                console.log(error);
@@ -76,92 +78,39 @@ function media(token,selector){
   
   this.LoadMore = function(item){    
       
-      if(this.index == 0){
-          
-          $.ajax({
-              url: this.url,
-              type: "GET",
-              dataType: "jsonp",
-              success: function(data){
-                  
-                  var new_page = data.pagination.next_url;
-                  
-                  //SE HACE UNA LLAMADA A AJAX PARA IMPRIMIR LAS FOTOS DE LA PÁGINA OBTENIDA
-                  $.ajax({
-                      url: new_page,
-                      type: "GET",
-                      dataType: "jsonp",
-                      success: function(data){
-                          
-                          data.data.forEach(function(elemento,index,array){
-                              
-                              var url = elemento.images.standard_resolution.url;
-                              var etiqueta = '<img src="'+url+'">';
-                               $("."+item).append(etiqueta);
-                          });
-                      }
-                  });
-              }
-          });
-          
-          this.index++; //SE INCREMENTA EL ÍNDICE
-      }else{
-          
-          this.index++;
-          console.log("Ahora el index tiene "+this.index);
-          
-          //SE GUARDA LA RUTA ACTUAL EN UN TEMPORAL CREADO EN EL DOM
-          if(!document.getElementById("temp")){
-              
-              $("<input type='hidden' id='temp'>").appendTo("body");
-              document.getElementById("temp").value = this.url;
-              console.log("Se creo un input con valor "+document.getElementById("temp").value);
-          }
-          
-          for(var i = 0; i <= this.index; i++){
-              
-              var ruta = document.getElementById("temp").value;
-              //SE VUELVE A USAR AJAX
-              
-              $.ajax({
-                  url: ruta,
-                  type: "GET",
-                  dataType: "jsonp",
-                  success: function(data){
-                      
-                      document.getElementById("temp").value = data.pagination.next_url;
-                      
-                  },
-                  error: function(jqXHR,textStatus,error){
-                      console.log(error);
-                  }
-              });
-          }
-          
-          //UNA ÚLTIMA LLAMADA AJAX PARA IMPRIMIR LAS FOTOS DE LA ÚLTIMA PÁGINA OBTENIDA
-          
-          ruta = document.getElementById("temp").value;
-          $.ajax({
-              url: ruta,
-              type: "GET",
-              dataType: "jsonp",
-              success: function(data){
-                  
-                  data.data.forEach(function(elemento,index,array){
-                      
-                      var url = elemento.images.standard_resolution.url;
-                      var etiqueta = '<img src="'+url+'">';
-                      $("."+item).append(etiqueta);
-                  });
-                  
-              },
-              error: function(jqXHR,textStatus,error){
-                  console.log(error);
-              }
-          });
-          
-      }
+       
+      var ruta = document.getElementById("temp").value;
       
+      $.ajax({
+          url: ruta,
+          type: "GET",
+          dataType: "jsonp",
+          success: function(data){
+              
+              data.data.forEach(function(elemento,index,array){
+                  var url = elemento.images.standard_resolution.url;
+                  var etiqueta  = '<img src="'+url+'">';
+                  $("."+item).append(etiqueta);
+              });
+              
+              //SE GUARDA LA SIGUIENTE RUTA EN EL TEMPORAL
+              document.getElementById("temp").value = data.pagination.next_url;
+              console.log(document.getElementById("temp").value);
+              
+              
+              
+          },
+          error: function(jqXHR,textStatus,error){
+              console.log(error);
+          }
+      });
+      
+      
+      //SE ELIMINA EL BOTON DE LOAD MORE CUANDO SE LLEGUE A LA ÚLTIMA PÁGINACIÓN
+      if(typeof(document.getElementById("temp").value) == "undefined"){
+                  console.log("bla bla bla");
+                  $("#button").remove();
+        }
   }
   
 }
