@@ -29,6 +29,7 @@
       ib.hashtag.fotosAppend("item of isotope grid","standard_resolution"); //IN THIS CASE standard_resolution
    </script>
    
+   
    LIST OF RESOLUTION:
    
       - Standard_resolution
