@@ -16,7 +16,7 @@
    
    Then, in your main script create a instaBousing object and call methods for show contents.
    
-   <script>
+   
        var ib = new instaBousing("ACCES_TOKEN","DIVCLASS PIVOT OF ISOTOPE");
        
        //EXECUTE METHODS FOR SHOW CONTENTS OF MEDIA
@@ -27,7 +27,7 @@
 
       ib.tagInit("QueBellaEsLaLoca");
       ib.hashtag.fotosAppend("item of isotope grid","standard_resolution"); //IN THIS CASE standard_resolution
-   </script>
+   
    
    
    LIST OF RESOLUTION:
