@@ -25,7 +25,7 @@
 
        /* METHODS FOR SHOW CONTENTS SEARCHED BY A HASHTAG (YOU MUST NEED PERMISSION OF INSTAGRAM API: SEE https://www.instagram.com/developer/review/ */
 
-      ib.tagInit("QueBellaEsLaLoca");
+      ib.tagInit("MyHashtag");
       ib.hashtag.fotosAppend("item of isotope grid","standard_resolution"); //IN THIS CASE standard_resolution
    
    
