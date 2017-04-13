@@ -4,7 +4,7 @@ Is for free use.
  Jorge Bou-saad
 */
 
-//MODULE OF instaBousing FOR THE MANAGE OF MEDIA
+//MODULE OF instaBousing FOR MEDIA
 
 function media(token,selector){
     
@@ -158,7 +158,7 @@ function media(token,selector){
 
 
 
-//MODULE OF instaBousing FOR MANAGE PHOTOS WHITH A HASHTAG
+//MODULE OF instaBousing FOR PHOTOS WHITH A HASHTAG
 
 function hashtag(token,tag){
     
