@@ -23,7 +23,7 @@
        ib.media.IsotopeInit("item of isotpe grid","fitRows"); 
        ib.media.fotosAppend("item of isotope grid","standard_resolution"); //IN THIS CASE standard_resolution
 
-       /* METHODS FOR SHOW CONTENTS SEARCHED BY A HASHTAG (YOU MUST NEED PERMISSION OF INSTAGRAM API: SEE https://www.instagram.com/developer/review/ */
+       /* METHODS FOR SHOW CONTENTS SEARCHED BY A HASHTAG (YOU MUST HAVE A PERMISSION OF INSTAGRAM API: SEE https://www.instagram.com/developer/review/ */
 
       ib.tagInit("MyHashtag");
       ib.hashtag.fotosAppend("item of isotope grid","standard_resolution"); //IN THIS CASE standard_resolution
