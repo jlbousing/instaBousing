@@ -2,14 +2,29 @@
   "name": "instabousing",
   "version": "1.0.0",
   "description": "Library to use the Instagram API.",
-  "main": "js/instaBousing.js",
+  "main": "lib/instaBousing.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bugs": {
+    "url": "https://github.com/jlbousing/instaBousing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlbousing/instaBousing.git"
+  },
+  "homepage": "https://jlbousing.github.io/instaBousing/",
   "author": "Jorge Luis Bou-saad",
-  "contributors": [{
-    "name": "Alexander Salas bastidas",
-    "email": "a.salas@ieee.org"
-  }],
+  "contributors": [
+    {
+      "name": "Alexander Salas Bastidas",
+      "email": "a.salas@ieee.org"
+    }
+  ],
+  "keywords": [
+    "Instagram",
+    "API",
+    "Bousing"
+  ],
   "license": "MIT"
 }
