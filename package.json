@@ -1,11 +1,15 @@
 {
   "name": "instabousing",
   "version": "1.0.0",
-  "description": "open source code for use the instagram api for JavaScipt",
-  "main": "ib.js",
+  "description": "Library to use the Instagram API.",
+  "main": "js/instaBousing.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jorge Luis Bou-saad",
-  "license": "ISC"
+  "contributors": [{
+    "name": "Alexander Salas bastidas",
+    "email": "a.salas@ieee.org"
+  }],
+  "license": "MIT"
 }
