@@ -1,10 +1,10 @@
 # instaBousing
 
-## What is?
+## What is it?
 
 Is an Open Source library to use Instagram API with an easy way through oriented object programming and Jquery Isotope.
 
-## How use?
+## How to use it?
 
 You must download the file instaBousing.js and JqueryIsotope call it in your HTML index like that:
 
