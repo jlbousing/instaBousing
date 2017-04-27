@@ -22,6 +22,9 @@ var ib = new instaBousing("ACCES_TOKEN","DIVCLASS PIVOT OF ISOTOPE");
 
 //EXECUTE METHODS FOR SHOW CONTENTS OF MEDIA
 ib.media.IsotopeInit("item of isotpe grid","fitRows");
+
+ib.media.setHtmlTag('<img src="'+ib.media.url+'">'); //YOU CONFIGURE HERE YOUR IMG TAG
+
 ib.media.fotosAppend("item of isotope grid","standard_resolution"); //IN THIS CASE standard_resolution
 
 /* METHODS FOR SHOW CONTENTS SEARCHED BY A HASHTAG (YOU MUST HAVE A PERMISSION OF INSTAGRAM API: SEE https://www.instagram.com/developer/review/ */
