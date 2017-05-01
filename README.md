@@ -9,9 +9,10 @@ Is an Open Source library to use Instagram API with an easy way through oriented
 ## Getting started
    
    You can install with npm:
-   ´´´ 
-   npm install instabousing 
-   ´´´
+   
+   ```batch
+npm install instabousing
+```
 
 You must download the file instaBousing.js and JqueryIsotope call it in your HTML index like that:
 
