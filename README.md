@@ -51,4 +51,8 @@ The images are received through AJAX calls to the URL of the API. Those URLs giv
 - Thumbnails
 - Low_resolution
 
+## Example
+
+   http://jorgebou-saad.esy.es/instabexample.html
+
 This code was made in Caracas, Venezuela by Jorge Luis Bou-saad. Is for free use. Enjoy and Happy Coding!!
